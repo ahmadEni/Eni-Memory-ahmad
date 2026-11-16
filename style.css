@@ -2,3 +2,12 @@
     max-width: 500px;
     border-radius: 20px;
 }
+#plateau {
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+}
+#plateau img{
+    width:200px;
+}
