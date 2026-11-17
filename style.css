@@ -5,9 +5,28 @@
 #plateau {
     
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     padding: 20px;
+    max-width: 300px;
+    margin: auto;
+    gap: 15px;
 }
 #plateau img{
-    width:200px;
+    width:100px;
+    height: 100px;
+}
+body{
+    background: linear-gradient(to top, #000000, #152331);
+    min-height: 100vh;
+    
+}
+p, h1, h2, li{
+    color: beige;
+}
+div img{
+    display: block;
+    margin: 0 auto;
+    height: 400px;
+    width: 500px;
+    
 }
