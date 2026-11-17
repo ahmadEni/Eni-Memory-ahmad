@@ -34,3 +34,12 @@ h1{
     margin-left: 1cm;
     margin-top: 0.5cm;
 }
+
+.victoire h1{
+    color: chartreuse !important;
+    font-size: 18em;
+    
+}
+.victoire{
+    display: none;
+}

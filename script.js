@@ -5,6 +5,7 @@ images.sort(()=>Math.random()-0.5);
 
 const plateau = document.getElementById("plateau")                      // div .plateau 
 let choix =[];                                                       // array max = 2      pour evaluate
+let nbVrai =0;
 
 
 for(let i = 0 ; i<images.length ;i++){                              // for each [i]  create carte  and add this carte inside the .plateau 
@@ -24,6 +25,8 @@ for(let i = 0 ; i<images.length ;i++){                              // for each 
             if(images[choix[0]] === images[choix[1]]){
                 console.log("the same")                         // for test the console
                 choix.length = 0;                           //// make array = zero 
+                nbVrai++
+                console.log(nbVrai)
 
             }else{                                                      // to say if !== 2 , change the image for the index choix [0][1]
                 setTimeout(function() {             
@@ -40,7 +43,12 @@ for(let i = 0 ; i<images.length ;i++){                              // for each 
             }
         }
         
-        
+        if(nbVrai === 6){
+            plateau.style.display="none";
+            console.log("win")
+             document.getElementById("win").style.display="inline-block"
+        }
+
         
     })
 }
