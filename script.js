@@ -12,7 +12,7 @@ for(let i = 0 ; i<images.length ;i++){                              // for each 
     carte.src="../ressources/question.svg";                         // 
     plateau.appendChild(carte)                                      // add the carte inside the div .plateau 
     carte.addEventListener("click",function(){                      // event click for change the image 
-        if(choix.length === 2){                                         // stop click 
+        if(choix.length === 2 || !carte.src.includes("question")){                                         // stop click 
             return;
         }
         carte.src =images[i]                             // change the src  with family image 
