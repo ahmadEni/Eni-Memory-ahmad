@@ -6,6 +6,11 @@ images.sort(()=>Math.random()-0.5);
 const plateau = document.getElementById("plateau")                      // div .plateau 
 let choix =[];                                                       // array max = 2      pour evaluate
 let nbVrai =0;
+let nbFaux =0;
+
+const scoreFaux = document.getElementById("nbFaux");
+
+scoreFaux.textContent = `nbFaux : ${nbFaux}`; 
 
 
 for(let i = 0 ; i<images.length ;i++){                              // for each [i]  create carte  and add this carte inside the .plateau 
@@ -23,13 +28,21 @@ for(let i = 0 ; i<images.length ;i++){                              // for each 
             
             console.log("its full ")                         // for test the console 
             if(images[choix[0]] === images[choix[1]]){
+                const audio = new Audio('../ressources/correct.mp3');                 // create audio for correct
+                audio.play();                                                     // to say if === 2 , change the image for the index choix [0][1]
                 console.log("the same")                         // for test the console
                 choix.length = 0;                           //// make array = zero 
                 nbVrai++
-                console.log(nbVrai)
+                
 
-            }else{                                                      // to say if !== 2 , change the image for the index choix [0][1]
-                setTimeout(function() {             
+            }else{ 
+                nbFaux = nbFaux + 1;
+                scoreFaux.textContent = `nbFaux : ${nbFaux}`;
+                const audio2 = new Audio('../ressources/erreur.mp3');                 // create audio for error
+                audio2.play();                                                     // to say if !== 2 , change the image for the index choix [0][1]
+                setTimeout(function() { 
+                    
+                                
                    for(let j = 0 ;j< 2;j++){                      // loop for 2 items 
                     
                     plateau.children[choix[j]].src = "../ressources/question.svg"     //  div .plateau the father  -- 12 image (the children )
@@ -44,9 +57,13 @@ for(let i = 0 ; i<images.length ;i++){                              // for each 
         }
         
         if(nbVrai === 6){
+            scoreFaux.style.display="none";
+            
             plateau.style.display="none";
             console.log("win")
-             document.getElementById("win").style.display="inline-block"
+            document.getElementById("win").style.display="block";
+            const audio = new Audio('../ressources/win.mp3');
+            audio.play();
         }
 
         

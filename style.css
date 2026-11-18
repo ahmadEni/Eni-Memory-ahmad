@@ -8,7 +8,7 @@
     grid-template-columns: repeat(4, 1fr);
     padding: 20px;
     max-width: 300px;
-    margin: auto;
+    margin-left:10vw ;
     gap: 15px;
 }
 #plateau img{
@@ -20,13 +20,17 @@ body{
     min-height: 100vh;
     
 }
+li{
+    margin-right: 1.5cm;
+    padding-right: 1.5cm;
+}
 p, h1, h2, li{
     color: beige;
 }
 div img{
     display: block;
     margin: 0 auto;
-    height: 400px;
+    height: 500px;
     width: 500px;
     
 }
@@ -35,11 +39,40 @@ h1{
     margin-top: 0.5cm;
 }
 
-.victoire h1{
+.victoire h2{
     color: chartreuse !important;
-    font-size: 18em;
+    margin-left: -1cm;
+    font-size: 4em;
     
 }
 .victoire{
     display: none;
+    text-align: center;
+    justify-content: center;    
+}
+.father{
+    display: flex;
+    flex-direction: row-reverse;
+    
+}
+.score{
+    margin-left: 5vw;
+    width: 25vw;
+    display: grid;
+    height: min-content;
+    margin-top: 30px;
+    color: dimgrey;
+}
+
+ #nbVrai,#nbFaux{
+    font-size:5em ;
+    margin-bottom: 0px;
+}
+#profile {
+    height: 200px;
+    width: 200px;
+    margin-top: 5vw;
+}
+#mon {
+    color: #aa138e;
 }
