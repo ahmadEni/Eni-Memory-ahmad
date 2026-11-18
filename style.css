@@ -76,3 +76,8 @@ h1{
 #mon {
     color: #aa138e;
 }
+#inscriptionForm {
+    max-width: 500px;
+    border-radius: 46px;
+    border-block-color: #aa138e;
+}
