@@ -10,6 +10,10 @@ let nbFaux =0;
 
 const scoreFaux = document.getElementById("nbFaux");
 
+
+const imgReaction = document.getElementById("reaction");
+
+
 scoreFaux.textContent = `nbFaux : ${nbFaux}`; 
 
 document.addEventListener("keydown", function(event) {
@@ -17,7 +21,7 @@ document.addEventListener("keydown", function(event) {
         console.log("Space key pressed");            // maessge for test
         location.reload(); // Reload the page
     }})  
-        // event keydown for space key
+        
 
 
     for(let i = 0 ; i<images.length ;i++){                              // for each [i]  create carte  and add this carte inside the .plateau 
@@ -40,24 +44,40 @@ document.addEventListener("keydown", function(event) {
                 console.log("its full ")                         // for test the console 
                 if(images[choix[0]] === images[choix[1]]){
                     const audio = new Audio('../ressources/correct.mp3');                 // create audio for correct
+                    imgReaction.style.display = "block";
+                    imgReaction.src = "../ressources/reaction2.png"
+                    setTimeout(function() {
+                        imgReaction.style.display = "none";
+                        imgReaction.src = "../ressources/reaction.png"
+                    }, 1000);
                     audio.play();                                                     // to say if === 2 , change the image for the index choix [0][1]
                     console.log("the same")                         // for test the console
                     choix.length = 0;                           //// make array = zero 
                     nbVrai++
                     
+                    
+
+                    
 
                 }else{ 
+                    
                     nbFaux = nbFaux + 1;
                     scoreFaux.textContent = `nbFaux : ${nbFaux}`;
                     const audio2 = new Audio('../ressources/erreur.mp3');                 // create audio for error
-                    audio2.play();                                                     // to say if !== 2 , change the image for the index choix [0][1]
+                    audio2.play(); 
+
+                    imgReaction.style.display = "block";                                              
                     setTimeout(function() { 
                         
+                        imgReaction.style.display = "none";
                                     
                     for(let j = 0 ;j< 2;j++){                      // loop for 2 items 
                         
+                        
                         plateau.children[choix[j]].src = "../ressources/question.svg"     //  div .plateau the father  -- 12 image (the children )
                         plateau.children[choix[j]].classList.remove("effet");         // remove the class effet for animation
+
+                        
 
                     } 
                     choix.length = 0;            // make array = zero 
@@ -71,6 +91,7 @@ document.addEventListener("keydown", function(event) {
             
             if(nbVrai === 6){
                 scoreFaux.style.display="none";
+                imgReaction.style.display="none";
                 
                 plateau.style.display="none";
                 console.log("win")
