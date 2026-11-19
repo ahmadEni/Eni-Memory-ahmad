@@ -79,11 +79,40 @@ h1{
 #mon {
     color: #aa138e;
 }
+
 #inscriptionForm {
     max-width: 500px;
     border-radius: 46px;
     border-block-color: #aa138e;
+    
 }
 .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
     color: #aa138e;
+}
+btn{
+    width: min-content;
+    
+}
+#connexionForm {
+    width: 350px;
+    border-radius: 2.25rem;
+    height: 250px;
+    border: 1px solid #aa138e;
+}
+.btn-success , .btn-secondary {
+    background-color: #304134;
+    border-radius: 1.25rem;
+    border-color: #aa138e;
+}
+.mt-4, .my-4 {
+    margin-top: 5.5rem !important;
+    
+}
+.my-4 h2{
+    margin-left: 150px;
+    
+}
+.form-control {
+    border-radius: 1.25rem;
+    border-color: #aa138e;
 }
