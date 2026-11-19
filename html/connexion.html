@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>connexion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <script src="../script.js" defer></script>
+    <link rel="stylesheet" href="../style.css">
+
+    
+
+</head>
+<body class="bg-secondary">
+    <h1>Connexion</h1>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item "><a class="nav-link" href="accueil.html">Accueil</a></li>
+            <li class="nav-item "><a class="nav-link" href="inscription.html">S'inscrire</a></li>
+            <li class="nav-item"><a class="nav-link" href="jouer.html">Jouer</a></li>
+            <li class="nav-item"><a class="nav-link" href="compte.html">Mon compte</a></li>
+            <li class="nav-item active"><a class="nav-link" href="connexion.html">Se connecter</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container my-4">
+        <h2 >Connexion</h2>
+        <form   id="connexionForm" class="card card-body mx-auto bg-dark text-white ">
+            <div class="form-group">
+                <label for="name" >Nom d'utilisateur :</label>
+                <input type="text" class="form-control" id="name" placeholder="Votre nom d'utilisateur" name="name"  required>
+            </div>
+                
+            <div class="form-group">
+                <label for="password">Mot de passe :</label>
+                <input type="password" class="form-control" id="password" placeholder="Votre mot de passe" name="password" required>
+            </div>
+                
+            <button  type="submit" class="btn btn-success ">valider</button>
+            
+        </form>

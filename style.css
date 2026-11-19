@@ -1,4 +1,4 @@
-#inscriptionForm{
+#inscriptionForm #connexionForm {
     max-width: 500px;
     border-radius: 20px;
 }
@@ -24,14 +24,17 @@ li{
     margin-right: 1.5cm;
     padding-right: 1.5cm;
 }
-p, h1, h2, li{
+p, h1, li{
     color: beige;
 }
+ h2{
+    color: #aa138e;
+ }
 div img{
     display: block;
     margin: 0 auto;
-    height: 500px;
-    width: 500px;
+    height: 350px;
+    width: 350px;
     
 }
 h1{
@@ -80,4 +83,7 @@ h1{
     max-width: 500px;
     border-radius: 46px;
     border-block-color: #aa138e;
+}
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: #aa138e;
 }
