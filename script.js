@@ -1,5 +1,6 @@
 const legums =["../ressources/memory-legume/1.svg","../ressources/memory-legume/2.svg","../ressources/memory-legume/3.svg","../ressources/memory-legume/4.svg","../ressources/memory-legume/5.svg","../ressources/memory-legume/6.svg","../ressources/memory-legume/1.svg","../ressources/memory-legume/2.svg","../ressources/memory-legume/3.svg","../ressources/memory-legume/4.svg","../ressources/memory-legume/5.svg","../ressources/memory-legume/6.svg"]
 const dinosaures =["../ressources/dinosaures/1.jpg","../ressources/dinosaures/2.jpg","../ressources/dinosaures/3.jpg","../ressources/dinosaures/4.jpg","../ressources/dinosaures/5.jpg","../ressources/dinosaures/6.jpg","../ressources/dinosaures/1.jpg","../ressources/dinosaures/2.jpg","../ressources/dinosaures/3.jpg","../ressources/dinosaures/4.jpg","../ressources/dinosaures/5.jpg","../ressources/dinosaures/6.jpg"]
+const animauxAnimes =["../ressources/animauxAnimes/1.webp","../ressources/animauxAnimes/2.webp","../ressources/animauxAnimes/3.webp","../ressources/animauxAnimes/4.webp","../ressources/animauxAnimes/5.webp","../ressources/animauxAnimes/6.webp","../ressources/animauxAnimes/1.webp","../ressources/animauxAnimes/2.webp","../ressources/animauxAnimes/3.webp","../ressources/animauxAnimes/4.webp","../ressources/animauxAnimes/5.webp","../ressources/animauxAnimes/6.webp"]
 
 
 const plateau = document.getElementById("plateau")                      // div .plateau 
@@ -100,5 +101,35 @@ function family(images){                                                        
 }
 
 
+family(legums); // default theme is legums
+const themeSelect = document.getElementById("theme");
 
-family(legums)
+
+themeSelect.addEventListener("change", function() {
+    const option = themeSelect.value;
+
+    plateau.innerHTML = "";   // Clear the plateau before loading new images
+    plateau.style.display = "grid"; // Show the plateau
+    document.getElementById("win").style.display = "none"; // Hide the win message
+    document.getElementById("nbFaux").style.display = "block"; // Show the score
+
+if (option === "legums") {
+    console.log("legums");
+    
+    family(legums);
+} else if (option === "dinosaures") {
+    console.log("dinosaures");
+    
+    family(dinosaures);
+} else if (option === "animauxAnimes") {
+    console.log("animauxAnimes");
+    family(animauxAnimes);
+}
+
+
+
+});
+
+
+
+
