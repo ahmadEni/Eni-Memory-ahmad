@@ -1,6 +1,7 @@
 const legums =["../ressources/memory-legume/1.svg","../ressources/memory-legume/2.svg","../ressources/memory-legume/3.svg","../ressources/memory-legume/4.svg","../ressources/memory-legume/5.svg","../ressources/memory-legume/6.svg","../ressources/memory-legume/1.svg","../ressources/memory-legume/2.svg","../ressources/memory-legume/3.svg","../ressources/memory-legume/4.svg","../ressources/memory-legume/5.svg","../ressources/memory-legume/6.svg"]
 const dinosaures =["../ressources/dinosaures/1.jpg","../ressources/dinosaures/2.jpg","../ressources/dinosaures/3.jpg","../ressources/dinosaures/4.jpg","../ressources/dinosaures/5.jpg","../ressources/dinosaures/6.jpg","../ressources/dinosaures/1.jpg","../ressources/dinosaures/2.jpg","../ressources/dinosaures/3.jpg","../ressources/dinosaures/4.jpg","../ressources/dinosaures/5.jpg","../ressources/dinosaures/6.jpg"]
 const animauxAnimes =["../ressources/animauxAnimes/1.webp","../ressources/animauxAnimes/2.webp","../ressources/animauxAnimes/3.webp","../ressources/animauxAnimes/4.webp","../ressources/animauxAnimes/5.webp","../ressources/animauxAnimes/6.webp","../ressources/animauxAnimes/1.webp","../ressources/animauxAnimes/2.webp","../ressources/animauxAnimes/3.webp","../ressources/animauxAnimes/4.webp","../ressources/animauxAnimes/5.webp","../ressources/animauxAnimes/6.webp"]
+const chiens =["../ressources/chiens/1.webp","../ressources/chiens/2.webp","../ressources/chiens/3.webp","../ressources/chiens/4.webp","../ressources/chiens/5.webp","../ressources/chiens/6.webp","../ressources/chiens/1.webp","../ressources/chiens/2.webp","../ressources/chiens/3.webp","../ressources/chiens/4.webp","../ressources/chiens/5.webp","../ressources/chiens/6.webp"]
 
 
 const plateau = document.getElementById("plateau")                      // div .plateau 
@@ -113,18 +114,21 @@ themeSelect.addEventListener("change", function() {
     document.getElementById("win").style.display = "none"; // Hide the win message
     document.getElementById("nbFaux").style.display = "block"; // Show the score
 
-if (option === "legums") {
-    console.log("legums");
-    
-    family(legums);
-} else if (option === "dinosaures") {
-    console.log("dinosaures");
-    
-    family(dinosaures);
-} else if (option === "animauxAnimes") {
-    console.log("animauxAnimes");
-    family(animauxAnimes);
-}
+    if (option === "legums") {
+        console.log("legums");
+        
+        family(legums);
+    } else if (option === "dinosaures") {
+        console.log("dinosaures");
+        
+        family(dinosaures);
+    } else if (option === "animauxAnimes") {
+        console.log("animauxAnimes");
+        family(animauxAnimes);
+    }else if (option === "chiens") {
+        console.log("chiens");
+        family(chiens); 
+    }
 
 
 
